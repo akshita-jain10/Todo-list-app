@@ -9,14 +9,12 @@ import { DemoAngularMaterialModule } from './DemoAngularMaterialModule';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatIconModule } from '@angular/material/icon';
-import { StatisticsComponent } from './admin/statistics/statistics.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    SignupComponent,
-    StatisticsComponent
+    SignupComponent
   ],
   imports: [
     BrowserModule,

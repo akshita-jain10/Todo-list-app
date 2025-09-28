@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { EmployeeRoutingModule } from './employee-routing.module';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { DemoAngularMaterialModule } from "../../DemoAngularMaterialModule";
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +15,10 @@ import { DemoAngularMaterialModule } from "../../DemoAngularMaterialModule";
   imports: [
     CommonModule,
     EmployeeRoutingModule,
-    DemoAngularMaterialModule
+    DemoAngularMaterialModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
 ]
 })
 export class EmployeeModule { }

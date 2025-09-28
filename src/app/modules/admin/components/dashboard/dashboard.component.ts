@@ -31,28 +31,28 @@ deleteTask(id:string){
     this.getTasks();
   } )
 }
-searchTask(){
-  const title = this.searchForm.get('title')!.value;
-  console.log(title);
-  
-  // Only clear the list if search input is empty
-  if (!title || title.trim() === '') {
-    this.getTasks(); // Show all tasks when search is empty
-    return;
-  }
-  
-  this.service.searchTask(title).subscribe((res)=>{
-    console.log(res);
-    this.listOfTasks = res; // Don't clear before API call, just replace with results
-  });
-}
 // searchTask(){
-//   this.listOfTasks=[];
-//   const title = this.searchForm.get('title')!.value  ;
+//   const title = this.searchForm.get('title')!.value;
 //   console.log(title);
+  
+//   // Only clear the list if search input is empty
+//   if (!title || title.trim() === '') {
+//     this.getTasks(); // Show all tasks when search is empty
+//     return;
+//   }
+  
 //   this.service.searchTask(title).subscribe((res)=>{
-//     console.log(res)
-//     this.listOfTasks=res; 
-//   })
+//     console.log(res);
+//     this.listOfTasks = res; // Don't clear before API call, just replace with results
+//   });
 // }
+searchTask(){
+  this.listOfTasks=[];
+  const title = this.searchForm.get('title')!.value  ;
+  console.log(title);
+  this.service.searchTask(title).subscribe((res)=>{
+    console.log(res)
+    this.listOfTasks=res; 
+  })
+}
 }
